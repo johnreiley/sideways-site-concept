@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(12px + (26 - 12) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 }
 
@@ -13,9 +13,13 @@ body {
           box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 .sideways-scroll-container {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
   -webkit-transform: rotate(-90deg) translateY(-100vh);
           transform: rotate(-90deg) translateY(-100vh);
   -webkit-transform-origin: top right;
@@ -52,7 +56,26 @@ body {
   height: 100vh;
   width: 100vw;
   padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scroll-child-content .content-wrapper {
   text-align: justify;
+}
+
+/* CONTENT STYLING */
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: steelblue;
+  padding-bottom: 10px;
 }
 
 .sideways-scroll-child:nth-child(1) .scroll-child-content {
@@ -60,19 +83,19 @@ body {
 }
 
 .sideways-scroll-child:nth-child(2) .scroll-child-content {
-  background-color: #c9c9c9;
+  background-color: #e6e6e6;
 }
 
 .sideways-scroll-child:nth-child(3) .scroll-child-content {
-  background-color: #8d8d8d;
+  background-color: #d2d2d2;
 }
 
 .sideways-scroll-child:nth-child(4) .scroll-child-content {
-  background-color: #636363;
+  background-color: #bebebe;
 }
 
 .sideways-scroll-child:nth-child(5) .scroll-child-content {
-  background-color: #333333;
+  background-color: #aaaaaa;
 }
 
 ::-webkit-scrollbar {
