@@ -13,7 +13,12 @@ body {
           box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -34,9 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 .sideways-scroll-child {
   scroll-snap-align: start;
   scroll-snap-stop: normal;
-  background-color: tomato;
-  -webkit-box-shadow: 0 0 4px 4px black;
-          box-shadow: 0 0 4px 4px black;
   height: 100vw;
   width: 100vh;
   -webkit-box-align: center;
@@ -46,6 +48,8 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: visible;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e2e2e2));
+  background: linear-gradient(white 0%, #e2e2e2 100%);
 }
 
 .scroll-child-content {
@@ -76,26 +80,6 @@ h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: steelblue;
   padding-bottom: 10px;
-}
-
-.sideways-scroll-child:nth-child(1) .scroll-child-content {
-  background-color: white;
-}
-
-.sideways-scroll-child:nth-child(2) .scroll-child-content {
-  background-color: #e6e6e6;
-}
-
-.sideways-scroll-child:nth-child(3) .scroll-child-content {
-  background-color: #d2d2d2;
-}
-
-.sideways-scroll-child:nth-child(4) .scroll-child-content {
-  background-color: #bebebe;
-}
-
-.sideways-scroll-child:nth-child(5) .scroll-child-content {
-  background-color: #aaaaaa;
 }
 
 ::-webkit-scrollbar {
