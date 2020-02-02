@@ -25,6 +25,27 @@ h6 {
     margin: 0;
 }
 
+.car {
+    img {
+        z-index: 10;
+        position: fixed;
+        left: 10%;
+        bottom: 1em;
+        height: 100px;
+        width: 250px;
+    }
+}
+
+.road {
+    z-index: 9;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 2em;
+    background-color: gray;
+}
+
 .sideways-scroll-container {
     scroll-snap-type: y proximity;
     transform: rotate(-90deg) translateY(-$scroll-container-width);
