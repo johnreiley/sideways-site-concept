@@ -16,7 +16,7 @@ body {
   font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
 }
 
-* {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -128,18 +128,6 @@ footer {
   background-image: url("./assets/lightbulb2.svg");
 }
 
-.preamble::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: -3;
-  left: -1em;
-  top: -3em;
-  height: 50%;
-  width: 100vw;
-  background-color: #c5ff8f;
-}
-
 .explanation::after {
   content: '';
   display: block;
@@ -147,9 +135,13 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
-  background-color: #8fffdd;
+  background-color: #c5ff8f;
+}
+
+.participation::before {
+  background-image: url("./assets/hands.svg");
 }
 
 .participation::after {
@@ -159,9 +151,9 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
-  background-color: #8fc0ff;
+  background-color: #8fffdd;
 }
 
 .benefits::after {
@@ -171,9 +163,13 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
-  background-color: #a48fff;
+  background-color: #8fc0ff;
+}
+
+.requirements::before {
+  background-image: url("./assets/checkbox.svg");
 }
 
 .requirements::after {
@@ -183,8 +179,8 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
-  background-color: #ff8fff;
+  background-color: #a48fff;
 }
 /*# sourceMappingURL=style.css.map */
